@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: /php/
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+
+Sitemap: https://netzhero.de/sitemap.xml

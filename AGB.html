@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Netzhero | Allgemeine Geschäftsbedingungen</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Impressum">
+    <meta name="keywords" content="Impressum">
+    <meta name="author" content="Erik Arens">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Page loading styles-->
+    <style>
+      .cs-page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .cs-page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .cs-page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .cs-page-loading.active > .cs-page-loading-inner {
+        opacity: 1;
+      }
+      .cs-page-loading-inner > span {
+        display: block;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #737491;
+      }
+      .cs-page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #766df4;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.cs-page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+      
+    </script>
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="vendor/tiny-slider/dist/tiny-slider.css"/>
+    <link rel="stylesheet" media="screen" href="vendor/flatpickr/dist/flatpickr.min.css"/>
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css">
+      <!-- Cookie Banner-->
+      <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.2/src/glowCookies.min.js"></script>
+      <script>
+          glowCookies.start('de', { 
+              style: 1,
+              analytics: 'UA-150725133-1',
+              policyLink: 'https://netzhero.de/datenschutz',
+              acceptBtnBackground: '#5549F1',
+              hideAfterClick: true
+          });
+      </script>
+    </head>
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+      <div class="cs-page-loading-inner">
+        <div class="cs-page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    <main class="cs-page-wrapper">
+      <!-- Beratung Modal-->
+      <div class="modal fade" id="modal-signin" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content border-0">
+            <div class="cs-view" id="modal-signup-view">
+              <div class="modal-header border-0 bg-dark px-4">
+                <h4 class="modal-title text-light">Beratung anfordern</h4>
+                <button class="close text-light" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+              <div class="modal-body px-4">
+                <p class="font-size-ms text-muted">Wir werden uns in kürze bei dir melden.</p>
+                
+                <form action="php/form-mailer-header.php" method="POST" class="needs-validation" role="form" id="contactForm">
+                  <div class="btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-outline-dark mr-2 mb-2 active">
+                      <input type="radio" name="services1-0" id="branding" checked>Branding
+                    </label>
+                    <label class="btn btn-outline-dark mr-2 mb-2">
+                      <input type="radio" name="services2-0" id="ux">UI/UX
+                    </label>
+                    <label class="btn btn-outline-dark mr-2 mb-2">
+                      <input type="radio" name="services3-0" id="web">Web
+                    </label>
+                    <label class="btn btn-outline-dark mb-2">
+                      <input type="radio" name="services4-0" id="mobile">Mobile
+                    </label>
+                  </div>
+                  <div class="input-group-overlay form-group">
+                    <div class="input-group-prepend-overlay"><span class="input-group-text"><i class="fe-user"></i></span></div>
+                    <input class="form-control prepended-form-control" id="name" type="text" name="name1" placeholder="Name" required>
+                  </div>
+                  <div class="input-group-overlay form-group">
+                    <div class="input-group-prepend-overlay"><span class="input-group-text"><i class="fe-mail"></i></span></div>
+                    <input class="form-control prepended-form-control" id="email" type="email" name="mail1" placeholder="Email" required>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" rows="4" id="message" name="text1" placeholder="Projekt Beschreibung" required></textarea>
+                  </div>
+                  <button class="btn btn-primary btn-block" type="submit">Anfrage senden</button>
+                </form>
+
+              </div>
+            </div>
+            <div class="modal-body text-center px-4 pt-2 pb-4">
+              <hr>
+              <p class="font-size-sm font-weight-medium text-heading pt-4">Hier sind wir auch zu finden.</p><a class="social-btn sb-facebook sb-lg mx-1 mb-2" href="https://www.facebook.com/netzhero.de"><i class="fe-facebook"></i></a><a class="social-btn sb-instagram sb-lg mx-1 mb-2" href="https://www.instagram.com/netzhero/"><i class="fe-instagram"></i></a><a class="social-btn sb-linkedin sb-lg mx-1 mb-2" href="http://linkedin.com/company/netzhero"><i class="fe-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar (Floating light)-->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+      <header class="cs-header navbar navbar-expand-lg navbar-dark navbar-floating navbar-sticky" data-scroll-header>
+        <div class="container px-0 px-xl-3">
+          <button class="navbar-toggler ml-n2 mr-2" type="button" data-toggle="offcanvas" data-offcanvas-id="primaryMenu"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand order-lg-1 mx-auto ml-lg-0 pr-lg-2 mr-lg-4" href="/"><img class="navbar-floating-logo d-none d-lg-block" width="153" src="img/img-main/logo/netzhero-logo-light.svg" alt="Erik Arens Netzhero"/><img class="navbar-stuck-logo" width="153" src="img/img-main/logo/netzhero-logo-dark.svg" alt="Erik Arens Netzhero"/><img class="d-lg-none" width="58" src="img/img-main/logo/netzhero-logo-dark.svg" alt="Erik Arens Netzhero"/></a>
+          <div class="d-flex align-items-center order-lg-3 ml-lg-auto"><a class="btn btn-primary ml-grid-gutter d-lg-inline-block navbar-btn" href="#modal-signin" data-toggle="modal" data-view="#modal-signup-view">Beraten lassen</a><a class="btn btn-primary ml-grid-gutter d-none d-lg-inline-block navbar-stuck-btn" href="#modal-signin" data-toggle="modal" data-view="#modal-signup-view">Beraten lassen</a></div>
+          <div class="cs-offcanvas-collapse order-lg-2" id="primaryMenu">
+            <div class="cs-offcanvas-cap navbar-box-shadow">
+              <h5 class="mt-1 mb-0">Menu</h5>
+              <button class="close lead" type="button" data-toggle="offcanvas" data-offcanvas-id="primaryMenu"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="cs-offcanvas-body">
+              <!-- Menu-->
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="dienstleistung.html">Dienstleistung</a></li>
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="ueber-uns.html">Über</a></li>
+                <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Page content-->
+      <!-- Hero-->
+      <section class="jarallax bg-dark py-7" data-jarallax data-speed="0.25">
+        <div class="jarallax-img" style="background-image: url(img/demo/booking/hero-bg.jpg);"></div>
+        <div class="container py-2 py-sm-6 text-center">
+          <div class="py-md-1">
+            <h1 class="text-light pb-1">Impressum</h1>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ-->
+      <section class="container py-5 my-4 my-sm-0 py-sm-6 py-md-7">
+        <div class="pb-2 px-5">
+                <h2 class="text-dark">ALLGEMEINE GESCHÄFTSBEDINGUNGEN</h2>
+                <p class="text-dark">
+                    von<br><br>
+                    Erik Arens Netzhero<br>
+                    Johannesstraße 29a<br>
+                    57368 Lennestadt<br><br>
+                    – im Folgenden: Netzhero –
+                </p>
+                <h4>1. Allgemeines</h4>
+                <p class="text-dark">
+                    1.1 Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge, die zwischen Netzhero und dem Kunden geschlossen werden.<br>
+                    1.2 Netzhero bietet dem Kunden unter anderem Leistungen im Bereich der Webseitenerstellung bzw. -entwicklung (einschließlich Wartung und Pflege). Der spezifische Leistungsumfang ist Gegenstand von Individualvereinbarungen zwischen Netzhero und dem Kunden.<br>
+                    1.3 Netzhero ist berechtigt, in eigenem Namen und auf eigene Rechnung die erforderlichen Leistungen an Subunternehmer zu vergeben, die ihrerseits ebenfalls Subunternehmer einsetzen dürfen. Netzhero bleibt hierbei alleiniger Vertragspartner des Kunden. Der Einsatz von Subunternehmern erfolgt nicht, sofern für Netzhero ersichtlich ist, dass deren Einsatz berechtigten Interessen des Kunden zuwiderläuft.<br>
+                    1.4 Die Vertragsparteien verpflichten sich, jeweils einen Ansprechpartner zu benennen, der den jeweiligen Auftrag begleitet und zur Abgabe von rechtsverbindlichen Willenserklärungen bevollmächtigt ist.<br>
+                    1.5 Von diesen Geschäftsbedingungen abweichende AGB, die durch den Kunden verwendet werden, erkennt Netzhero – vorbehaltlich einer ausdrücklichen Zustimmung – nicht an.<br>    
+                </p>
+                <h4>2. Mitwirkungspflichten des Kunden</h4>
+                <p class="text-dark">
+                    2.1 Sofern der Kunde Netzhero Texte, Bilder oder sonstige Inhalte zur Verfügung stellt, hat er dafür zu sorgen, dass diese Inhalte nicht gegen die Rechte Dritter (z.B. Urheberrechte) oder sonstige Rechtsnormen verstoßen. Es wird in diesem Zusammenhang darauf hingewiesen, dass Netzhero von Rechts wegen nicht berechtigt ist, Rechtsberatungsleistungen gegenüber dem Kunden zu erbringen. Netzhero ist insbesondere nicht verpflichtet und rechtlich nicht in der Lage, das Geschäftsmodell des Kunden und/oder die vom Kunden selbst erstellten oder erworbenen Werke (Layouts, Grafiken, Texte etc.) auf ihre Vereinbarkeit mit dem geltenden Recht zu prüfen. Netzhero wird insbesondere keine Markenrecherchen oder sonstige Schutzrechtskollisionsprüfungen in Bezug auf die vom Kunden zur Verfügung gestellten Werke vornehmen. Soweit der Kunde bestimmte Weisungen bzgl. des herzustellenden Werks erteilt, haftet er hierfür selbst.<br>
+                    2.2 Der Kunde ist verpflichtet, die von ihm zum Zwecke der Auftragserfüllung zur Verfügung gestellten Informationen, Daten, Werke (z.B. die Daten für das Impressum, Grafiken etc.) und Zugänge vollständig und korrekt mitzuteilen. Er hat ferner dafür Sorge zu tragen, dass die von ihm erteilten Weisungen mit dem geltenden Recht in Einklang stehen.<br>
+                    2.3 Der Kunde ist – vorbehaltlich abweichender Individualvereinbarungen – für die Beschaffung des Materials zur Ausgestaltung der Webseiten und sonstigen Werke (z.B. Grafiken, Videos) selbst verantwortlich und stellt diese Netzhero rechtzeitig zur Verfügung. Stellt der Kunde diese nicht zur Verfügung und macht er auch keine weitergehenden Vorgaben, so kann Netzhero nach eigener Wahl unter Beachtung der urheberrechtlichen Kennzeichnungsvorgaben Bildmaterial gängiger Anbieter (z.B. Stockfoto-Dienstleister) verwenden oder die entsprechenden Teile der Webseite mit einem Platzhalter versehen.<br>
+                    2.4 Sofern für einzelne Auftragsbestandteile der Abschluss eines Auftragsverarbeitungsvertrags nach Art. 28 DSGVO erforderlich ist, verpflichten sich beide Vertragsparteien, einen solchen – von Netzhero zu stellenden – Vertrag vor Beginn der Leistungserbringung abzuschließen.<br>
+                    2.5 Für Verzögerungen und Verspätungen bei der Umsetzung von Projekten, die durch eine verspätete (notwendige) Mit- bzw. Zuarbeit des Kunden entstehen, ist Netzhero gegenüber dem Kunden in keinerlei Hinsicht verantwortlich.<br>
+                    2.6 Kommt der Kunde seinen Verpflichtungen aus dieser Ziffer nicht nach, kann Netzhero dem Kunden den hierdurch entstehenden Zusatzaufwand (z.B. Kosten für Stockfotos und Zeitaufwand für deren Suche) in Rechnung stellen.<br>    
+                </p>
+                <h4>3. Webseitenerstellung mit Hilfe agiler Methoden</h4>
+                <p class="text-dark">
+                    3.1 Sofern keine abweichenden Individualvereinbarungen getroffen wurden, erfolgt die Webseitenerstellung auf Grundlage agiler Methoden. Die übrigen Regelungen dieser AGB bleiben unberührt. Suchmaschinenoptimierung (SEO) wird nur geschuldet, wenn sie ausdrücklich vereinbart wurde.<br>
+                    3.2 Gegenstand von Webseiten-Erstellungsverträgen zwischen Netzhero und dem Kunden ist grundsätzlich die Entwicklung neuer Webseiten oder die Erweiterung bestehender Webseiten (z.B. Einbinden neuer Schnittstellen) unter Beachtung der technischen und/oder gestalterischen Vorgaben des Kunden. Zwischen den Parteien geschlossene Webseiten-Erstellungsverträge sind Werkverträge im Sinne von §§ 631 ff. BGB.<br>
+                    3.3 Soweit nicht anders vereinbart sind die die erstellten Webseiten für alle gängigen Browser in ihrer jeweils aktuellen Fassungen optimiert (jeweils die letzten zwei Versionen des Browsers). Eine Optimierung für Mobilgeräte ist nur geschuldet, wenn dies ausdrücklich vereinbart wurde<br>
+                    3.4 Die im Einzelnen vereinbarten Leistungen ergeben sich aus dem zwischen Netzhero und dem Kunden individuell abgeschlossenen Vertrag. Hierzu stellt der Kunde bei Netzhero zunächst eine Anfrage mit einer möglichst genauen Beschreibung der von ihm gewünschten Webseiten-Inhalte (gestalterische Inhalte wie Bilder, Layouts, Logos u.Ä. sind vom Kunden festzulegen und zur Verfügung zu stellen). Diese Anfrage stellt eine Aufforderung zur Abgabe eines Angebots durch Netzhero dar. Netzhero wird die in der Anfrage beschriebenen Vorstellungen des Kunden nach bestem Wissen und Gewissen auf Vollständigkeit, Geeignetheit, Eindeutigkeit, Realisierbarkeit und Widerspruchsfreiheit prüfen und auf Grundlage der aus der Kundenanfrage hervorgehenden Wünsche ein Angebot erstellen. Erst durch die Annahme des Angebots durch den Kunden kommt ein Vertrag zwischen Netzhero und dem Kunden zustande.<br>
+                    3.5 Die Prüfung oder Beschaffung von Rechten, die Beschaffung von Tools (z.B. Statistik) oder Zertifikaten (z.B. SSL / TLS) oder die Überlassung einer Entwicklungs-, Anwendungs- oder sonstigen Dokumentation sind von Netzhero nur dann zu erbringen, soweit dies individualvertraglich ausdrücklich vereinbart ist.<br>
+                    3.6 Der Kunde kann nach vorheriger Anfrage auf die Entwicklungsseite zugreifen und Kundenwünsche einbringen, soweit diese vom ursprünglich vereinbarten Leistungsumfang gedeckt sind. Derartige Anpassungen werden Bestandteil des ursprünglichen Vertrags, wenn beide Vertragsparteien in Textform (d.h. z.B. per E-Mail, Telefax o.Ä.) zustimmen. Im Übrigen ist Netzhero nur zur Herstellung der im Vertrag aufgelisteten Funktionen/Positionen bzw. zur Erbringung der vereinbarten Dienstleistung (z.B. Wartung) verpflichtet. Darüberhinausgehende Leistungen müssen gesondert vereinbart und vergütet werden.<br>
+                    3.7 Das Angebot von Netzhero enthält in der Regel eine „Musterseite“ oder einen „Online-Gestaltungsvorschlag“, deren Format und Inhalte von Netzhero nach freiem Ermessen ausgewählt werden; es besteht kein Anspruch auf bestimmte gestalterische Elemente oder Funktionen. Sofern eine Einigung auf Grundlage der „Musterseite“ oder des „Online-Gestaltungsvorschlags“ nicht möglich ist, kommt kein Vertrag zustande; der potenzielle Kunde hat in diesem Fall keinen Anspruch auf Herausgabe der „Musterseite“ oder des „Online-Gestaltungsvorschlags“ oder der dazugehörigen Quellcodes, Kopien o.Ä. Beim Kunden verbleibende Kopien sind zu löschen oder an Netzhero herauszugeben.<br>
+                    3.8 Sobald die Webseite fertiggestellt wurde, wird Netzhero den Kunden zur Abnahme der Webseite auffordern.<br>
+                    3.9 Voraussetzung für die Tätigkeit von Netzhero ist, dass der Kunde sämtliche für die Umsetzung des Projekts erforderliche Daten (Texte, Vorlagen, Grafiken etc.) Netzhero vor Auftragsbeginn vollständig in geeigneter Form zur Verfügung stellt. Kommt der Kunde dieser Verpflichtung nicht nach, kann Netzhero dem Kunden den hierdurch entstehenden Zeitaufwand in Rechnung stellen.<br>
+                    3.10 Ein Anspruch auf die Herausgabe von Grafiken, Quellcodes, (Entwicklungs-)Dokumentationen, Handbücher und sonstiger Zusatzdokumentation besteht – vorbehaltlich abweichender ausdrücklicher Individualvereinbarungen – nicht.<br>
+                    3.11 Die Vergütung für die Webseiten-Erstellung ist Gegenstand einer individualvertraglichen Vereinbarung zwischen den Parteien. Im Übrigen finden die gesetzlichen Vorschriften Anwendung.<br>
+                    3.12 Sofern der Kunde für die neue Webseite keine Hosting-Dienstleistungen von Netzhero, sondern von Drittanbietern in Anspruch nimmt, übernimmt Netzhero keine Verantwortung für die jeweiligen Server und deren Konfiguration, die Datenleitungen und/oder die Abrufbarkeit der Webseite.<br>  
+                </p>
+                <h4>4. Besondere Bestimmungen für die Wartung von Webseiten</h4>
+                <p class="text-dark">
+                    4.1 Nach Fertigstellung der Webseite und/oder einzelner Teile hiervon kann Netzhero dem Kunden Wartungs- und Pflegeleistungen in Bezug auf die Webseite anbieten. Netzhero kann auch die Wartung von Drittwebseiten anbieten. Jedoch ist weder Netzhero zu einem solchen Angebot verpflichtet, noch muss der Kunde die weitergehenden Leistungsangebote von Netzhero in Anspruch nehmen. Entsprechende Vereinbarungen sind ausschließlich Gegenstand von Individualabsprachen.<br>
+                    4.2 Inhalt der Wartungsverträge ist die Beseitigung von Funktionsstörungen sowie die anlassbezogene Aktualisierung der Webseite für gängige Webbrowser in ihrer jeweils aktuellen Version. Weitere Details, wie z.B. regelmäßige Wartungen, können ggf. individualvertraglich vereinbart werden.<br>
+                    4.3 Voraussetzung für die Wartung ist, dass die zu wartenden Inhalte mit den Systemen von Netzhero kompatibel sind. Die Kompatibilität kann insbesondere durch veraltete Komponenten der zu wartenden Inhalte oder durch eigenmächtige Änderungen von Seiten des Kunden beeinträchtigt werden. Sollte die Kompatibilität nicht gewährleistet sein, muss der Kunde diese selbstständig herstellen (z.B. durch entsprechende Updates) oder Netzhero gesondert mit der Herstellung der Kompatibilität beauftragen.<br>
+                    4.4 Netzhero haftet nicht für Funktionsstörungen und Inkompatibilitäten, die durch eigenmächtige Änderungen des Kunden verursacht wurden oder auf sonstigen Fehlern beruhen, die nicht im Verantwortungsbereich von Netzhero liegen; die Vorschriften unter „Haftung und Freistellung“ bleiben hiervon unberührt.<br>
+                    4.5 Die Wartung umfasst, vorbehaltlich abweichender Vereinbarungen, nur die technische, nicht jedoch die inhaltliche Aktualisierung der Webseite. Netzhero schuldet insbesondere nicht die Aktualisierung des Impressums oder der Datenschutzerklärung.<br>  
+                </p>
+               <h4>5. Webhosting und Domainregistrierung</h4>
+               <p class="text-dark">
+                5.1 Netzhero bietet dem Kunden – insbesondere als Zusatzoption im Rahmen der Webseiten-Erstellung – auch Hosting- und Domainregistrierungsleistungen an. Der spezifische Leistungsumfang (Domainregistrierung, Speicherplatz, Zertifikate etc.) ist Gegenstand individueller Vereinbarungen zwischen den Parteien. Netzhero ist berechtigt, Leistungen Dritter in jedweder Form im Zusammenhang mit der Ausführung von Hostingleistungen in Anspruch zu nehmen.<br>
+                5.2 Sofern nicht anders vereinbart, übernimmt Netzhero im Falle einer Beauftragung als Hoster die Administration und Verwaltung der Daten. Der Kunde erhält grundsätzlich keinen Zugang zum Administrationsbackend des Hostingsystems. Auf Anfrage kann der Kunde jedoch Zugang zum Administrationsbackend des Hostingsystems erhalten.<br>
+                5.3 Die Verfügbarkeit der von Netzhero zum Zwecke des Hostings verwendeten Server liegt bei mindestens 99% im Jahresmittel. Hiervon ausgenommen sind diejenigen Zeiten, innerhalb derer die Server aufgrund durch von Netzhero nicht beeinflussbarer Ereignisse nicht erreichbar sind (Höhere Gewalt, Handlungen Dritter, Technische Probleme etc.).<br>
+                5.4 Sofern nicht anders vereinbart besteht kein Anspruch des Kunden auf die Zuweisung einer festen IP-Adresse für seine Internetpräsenz. Technisch oder rechtlich bedingte Änderungen sind jederzeit möglich und bleiben vorbehalten.<br>
+                5.5 Der Kunde ist verpflichtet, seine Passwörter und sonstigen Zugangsdaten – sofern ihm solche von Netzhero zur Verfügung gestellt wurden – nicht an Dritte weiterzugeben und regelmäßig zu ändern. Für eventuellen Missbrauch durch Dritte ist der Kunde selbst verantwortlich, soweit er diesen zu vertreten hat.<br>
+                5.6 Der Kunde ist verpflichtet, regelmäßige Sicherungskopien seiner gehosteten Daten zu erstellen. Ist der Kunde hierzu nicht in der Lage, hat er Netzhero oder andere hierzu fachlich geeignete Dritte mit der Sicherung zu beauftragen. Für eventuelle Datenverluste, die aufgrund mangelnder Datensicherung entstehen, haftet der Kunde selbst.<br>
+                5.7 Nimmt der Kunde Domainregistrierungsleistungen von Netzhero in Anspruch, gilt ergänzend folgendes:<br>
+                5.7.1 Das zur Registrierung der jeweiligen Domain erforderliche Vertragsverhältnis kommt direkt zwischen dem Kunden und der jeweiligen Domainvergabestelle bzw. dem jeweiligen Registrar zustande. Netzhero wird im Verhältnis zwischen Kunde und Vergabestelle lediglich als Vermittler tätig, ohne eigenen Einfluss auf die Vergabe der Domain zu haben.<br>
+                5.7.2 Der Kunde trägt die volle Verantwortung dafür, dass die von ihm gewünschte Domain keine Rechte Dritter verletzt. Eine Überprüfung der Domain ist nicht geschuldet.<br>
+                5.7.3 Für die Registrierung von Domains gelten ergänzend die jeweiligen Bedingungen der einzelnen Vergabestellen. Netzhero wird den Kunden im Falle einer beabsichtigten Registrierung auf eventuelle Besonderheiten hinweisen.<br>
+               </p>
+                <h4>6. SEO-Marketing und SEA-Kampagnen</h4>
+                <p class="text-dark">
+                    6.1 Netzhero bietet dem Kunden u.a. Dienstleistungen im Bereich SEO-Marketing an. Im Rahmen der Leistungserbringung schuldet Netzhero ausschließlich die Durchführung von Maßnahmen, die nach eigener Erfahrung von Netzhero das Suchmaschinen-Ranking positiv beeinflussen können oder vom Auftraggeber ausdrücklich angeordnet werden. Hierbei handelt es sich um eine Dienstleistung im Sinne von §§ 611 ff. BGB. Ein bestimmtes Ergebnis (z.B. ein bestimmtes Ranking in der Google Trefferliste) wird im Rahmen der SEO-Dienstleistungen dagegen nur dann geschuldet, wenn dieses ausdrücklich zugesichert wurde. Marketing-Leistungen können von beiden Vertragsparteien mit einer Kündigungsfrist von einem (1) Monaten wieder abbestellt werden.<br>
+                    6.2 Netzhero bietet dem Kunden ferner Dienstleistungen im Bereich von SEA-Kampagnen an. Im Rahmen der Leistungserbringung schuldet Netzhero ausschließlich die Unterbreitung von Vorschlägen bzgl. werbewirksamer Keywords und nach Freigabe des Kunden die Durchführung der Maßnahme (Schaltung von Werbeanzeigen). Hierbei handelt es sich um Dienstleistungen im Sinne von §§ 611 ff. BGB. Ein bestimmtes Ergebnis (z.B. Verkaufszahlen) wird im Rahmen von SEA-Dienstleistungen nicht geschuldet, es sei denn, dies wurde ausdrücklich zugesichert. Netzhero hat neben dem Anspruch auf Vergütung der Dienstleistung einen Anspruch auf Aufwendungsersatz im Hinblick auf die kostenpflichtigen Anzeigen gegenüber dem Kunden. Netzhero trifft nicht die Verpflichtung, die Rechtmäßigkeit von Keywords zu überprüfen. Netzhero unterbreitet dem Kunden Vorschläge bzgl. der Buchung von Keywords. Die rechtliche Prüfung insbesondere auf die Markenrechte Dritter und Freigabe der Keywords obliegt dem Kunden vor Durchführung der Kampagne.<br>
+                    7. Preise und Vergütung<br>
+                    Die Vergütung für die Webseiten-Erstellung oder für sonstige Aufträge ist Gegenstand einer individualvertraglichen Vereinbarung zwischen den Parteien und richtet sich grundsätzlich nach dem Angebot.<br>   
+                </p>
+                <h4>8. Abnahme</h4>
+                <p class="text-dark">
+                    Soweit eine Werkleistung vereinbart wurde, kann Netzhero verlangen, dass die Abnahme in Schriftform erfolgt; die schriftliche Abnahme ist nur geschuldet, wenn Netzhero den Kunden hierzu auffordert. Die Abnahmebestimmungen des Bürgerlichen Gesetzbuches bleiben im Übrigen unberührt. Die Abnahmefrist im Sinne des § 640 Abs. 2 S. 1 BGB wird auf 2 Wochen ab Mitteilung über die Fertigstellung des Werks festgelegt, sofern im Einzelfall aufgrund besonderer Umstände nicht eine längere Abnahmefrist erforderlich ist, die Netzhero dem Kunden in diesem Fall gesondert mitteilen wird. Sofern sich der Kunde innerhalb dieser Frist nicht äußert oder die Abnahme nicht wegen eines Mangels verweigert, gilt das Werk als abgenommen.<br>
+                </p>
+                <h4>9. Mängelgewährleistung</h4>
+                <p class="text-dark">
+                    Ein unwesentlicher Mangel begründet keine Mängelansprüche. Die Wahl der Art der Nacherfüllung liegt bei Netzhero. Die Verjährungsfrist für Mängel und sonstige Ansprüche beträgt ein (1) Jahr; diese Verjährungsverkürzung gilt nicht für Ansprüche, die aus Vorsatz, grober Fahrlässigkeit oder aus der Verletzung von Leib, Leben oder Gesundheit durch Netzhero resultieren. Die Verjährung beginnt nicht erneut, sofern im Rahmen der Mängelhaftung eine Ersatzlieferung erfolgt. Im Übrigen bleibt die gesetzliche Mängelgewährleistung unberührt.<br>
+                </p>
+                <h4>10. Vertragslaufzeit bei Dauerschuldverhältnissen</h4>
+                <p class="text-dark">
+                    Vorbehaltlich abweichender Bestimmungen in und außerhalb dieser AGB haben Dauerschuldverhältnisse (z.B. Wartungsverträge) eine Mindestlaufzeit von 6 Monaten. Die Kündigungsfrist beträgt einen (1) Monat. Wird der Vertrag nicht fristgerecht zum Laufzeitende gekündigt, verlängert er sich automatisch um weitere 6 Monate. Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt.<br>
+                </p>
+                <h4>11. Rechteeinräumung, Eigenwerbung und Erwähnungsrecht</h4>
+                <p class="text-dark">
+                    11.1 Netzhero räumt dem Kunden – nach vollständiger Bezahlung des Auftrags durch den Kunden – an den entsprechenden Arbeitsergebnissen und/oder den jeweiligen Quellcodes im Zeitpunkt ihrer Entstehung grundsätzlich ein einfaches Nutzungsrecht ein. Weitergehende Rechte können zwischen den Parteien mittels einer individualvertraglichen Einigung vereinbart werden.<br>
+                    11.2 Sofern nichts Abweichendes vereinbart wurde, erteilt der Kunde Netzhero ausdrücklich die Erlaubnis, das Projekt zum Zwecke der Eigenwerbung (Referenzen/Portfolio) in angemessener Weise öffentlich darzustellen. Insbesondere ist Netzhero dazu berechtigt, mit der Geschäftsbeziehung zu dem Kunden zu werben und auf allen erstellten Werbemitteln und bei allen Werbemaßnahmen auf sich als Urheber hinzuweisen, ohne dass dem Kunden dafür ein Entgeltanspruch zusteht.<br>
+                    11.3 Ferner ist Netzhero berechtigt, den eigenen Namen mit Verlinkung in angemessener Weise im Footer und im Impressum der von Netzhero erstellten Webseite(n) zu platzieren, ohne dass dem Kunden hierfür ein Entgeltanspruch zusteht.<br>    
+                </p>
+                <h4>12. Vertraulichkeit</h4>
+                <p class="text-dark">
+                    Netzhero wird alle Netzhero zur Kenntnis gelangenden Geschäftsvorgänge, insbesondere, aber nicht ausschließlich, Druckunterlagen, Layouts, Storyboards, Zahlenmaterial, Zeichnungen, Tonbänder, Bilder, Videos, DVD, CD-ROMs, interaktive Produkte und solche anderen Unterlagen, welche Filme und/oder Hörspiele und/oder sonstige urheberrechtlich geschützte Materialien des Kunden oder mit ihm verbundenen Unternehmen enthalten, streng vertraulich behandeln. Netzhero verpflichtet sich, die Geheimhaltungspflicht sämtlichen Angestellten und/oder Dritten (bspw. Lieferanten, Grafikern, Programmierern, Filmproduzenten, Tonstudios etc.), die Zugang zu den vorbezeichneten Geschäftsvorgängen haben, aufzuerlegen. Die Geheimhaltungspflicht gilt zeitlich unbegrenzt über die Dauer dieses Vertrages hinaus.<br>
+                </p>
+                <h4>13. Haftung / Freistellung</h4>
+                <p class="text-dark">
+                    13.1 Die Haftung von Netzhero für sämtliche Schäden wird wie folgt beschränkt: Bei einer leicht fahrlässigen Verletzung einer wesentlichen Vertragspflicht („Kardinalpflicht“) haftet Netzhero jeweils der Höhe nach begrenzt auf den bei Vertragsschluss vorhersehbaren, vertragstypischen Schaden. Kardinalpflichten sind solche Pflichten, deren Erfüllung die ordnungsgemäße Durchführung des Vertrags überhaupt erst ermöglicht und auf deren Einhaltung eine Partei regelmäßig vertrauen darf. Diese Haftungsbeschränkung gilt nicht bei grober Fahrlässigkeit oder bei vorsätzlichem Handeln sowie im Falle zwingender gesetzlicher Haftung, insbesondere bei Übernahme einer Garantie oder bei schuldhaften Verletzungen des Lebens, des Körpers oder der Gesundheit. Die vorstehende Haftungsregelung gilt auch im Hinblick auf die Haftung von Netzhero für Erfüllungsgehilfen und gesetzlichen Vertreter.<br>
+                    13.2 Der Kunde stellt Netzhero von jeglichen Ansprüchen Dritter frei, die gegen Netzhero aufgrund von Verstößen des Kunden gegen diese AGB oder gegen geltendes Recht geltend gemacht werden.<br>    
+                </p>
+                <h4>14. Schlussbestimmungen</h4>
+                <p class="text-dark">
+                    14.1 Die zwischen Netzhero und den Kunden geschlossenen Verträge unterliegen dem materiellen Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.<br>
+                    14.2 Sofern der Kunde Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen ist oder keinen allgemeinen Gerichtsstand in Deutschland hat, vereinbaren die Parteien den Sitz von Netzhero als Gerichtsstand für sämtliche Streitigkeiten aus diesem Vertragsverhältnis; ausschließliche Gerichtsstände bleiben hiervon unberührt.<br>
+                    14.3 Netzhero ist berechtigt, diese AGB aus sachlich gerechtfertigten Gründen (z.B. Änderungen in der Rechtsprechung, Gesetzeslage, Marktgegebenheiten oder der Geschäfts- oder Unternehmensstrategie) und unter Einhaltung einer angemessenen Frist zu ändern. Bestandskunden werden hierüber spätestens zwei Wochen vor Inkrafttreten der Änderung per E-Mail benachrichtigt. Sofern der Bestandskunde nicht innerhalb der in der Änderungsmitteilung gesetzten Frist widerspricht, gilt seine Zustimmung zur Änderung als erteilt. Im Falle des Widerspruchs ist Netzhero berechtigt, den Vertrag zum Zeitpunkt des Inkrafttretens der Änderung außerordentlich zu kündigen. Die Benachrichtigung über die beabsichtigte Änderung dieser Nutzungsbedingungen wird auf die Frist und die Folgen des Widerspruchs oder seines Ausbleibens hinweisen.<br>    
+                </p>
+                <h4>Stand: Juni 2021</h4>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer bg-dark pt-5 pb-4">
+      <div class="container d-md-flex justify-content-between align-items-center text-center">
+        <ul class="list-inline font-size-sm mb-3 order-md-2">
+          <li class="list-inline-item my-1"><a class="nav-link-style nav-link-light" href="impressum.html">Impressum</a></li>
+          <li class="list-inline-item my-1"><a class="nav-link-style nav-link-light" href="datenschutz.html">Datenschutzerklärung</a></li>
+          <li class="list-inline-item my-1"><a class="nav-link-style nav-link-light" href="agb.html">AGB</a></li>
+        </ul>
+        <p class="font-size-sm mb-3 order-md-1"><span class="text-light opacity-50 mr-1">© All rights reserved. </span><a class="nav-link-style nav-link-light" href="https://netzhero.de/" target="_blank" rel="noopener">Erik Arens Netzhero</a></p>
+      </div>
+    </footer>
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll><span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span><i class="btn-scroll-top-icon fe-arrow-up">   </i></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="vendor/jarallax/dist/jarallax.min.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+  </body>
+</html>
