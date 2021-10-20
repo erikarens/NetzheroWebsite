@@ -139,16 +139,13 @@
                 <form action="php/form-mailer-header.php" method="POST" class="needs-validation" role="form" id="contactForm">
                   <div class="btn-group-toggle" data-toggle="buttons">
                     <label class="btn btn-outline-dark mr-2 mb-2 active">
-                      <input type="radio" name="services1-0" id="branding" checked>Branding
+                      <input type="radio" name="services1-0" id="website" checked>Webdesign / Website
                     </label>
                     <label class="btn btn-outline-dark mr-2 mb-2">
-                      <input type="radio" name="services2-0" id="ux">UI/UX
+                      <input type="radio" name="services2-0" id="web-app">Webbasierte Softwarelösungen
                     </label>
                     <label class="btn btn-outline-dark mr-2 mb-2">
-                      <input type="radio" name="services3-0" id="web">Web
-                    </label>
-                    <label class="btn btn-outline-dark mb-2">
-                      <input type="radio" name="services4-0" id="mobile">Mobile
+                      <input type="radio" name="services3-0" id="seo">Suchmaschinenoptimierung
                     </label>
                   </div>
                   <div class="input-group-overlay form-group">
@@ -178,7 +175,7 @@
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
       <header class="cs-header navbar navbar-expand-lg navbar-dark navbar-floating navbar-sticky" data-scroll-header>
         <div class="container px-0 px-xl-3">
-          <button class="navbar-toggler ml-n2 mr-2" type="button" data-toggle="offcanvas" data-offcanvas-id="primaryMenu"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand order-lg-1 mx-auto ml-lg-0 pr-lg-2 mr-lg-4" href="/"><img class="navbar-floating-logo d-none d-lg-block" width="153" src="img/img-main/logo/netzhero-logo-light.svg" alt="Erik Arens Netzhero"/><img class="navbar-stuck-logo" width="153" src="img/img-main/logo/netzhero-logo-dark.svg" alt="Erik Arens Netzhero"/><img class="d-lg-none" width="58" src="img/img-main/logo/netzhero-logo-dark.svg" alt="Erik Arens Netzhero"/></a>
+          <button class="navbar-toggler ml-n2 mr-2" type="button" data-toggle="offcanvas" data-offcanvas-id="primaryMenu"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand order-lg-1 mx-auto ml-lg-0 pr-lg-2 mr-lg-4" href="/"><img class="navbar-floating-logo d-none d-lg-block" width="153" src="img/img-main/logo/netzhero-logo-light.svg" alt="Erik Arens Netzhero"/><img class="navbar-stuck-logo" width="153" src="img/img-main/logo/netzhero-logo-dark.svg" alt="Erik Arens Netzhero"/><img class="d-lg-none" width="90" src="img/img-main/logo/netzhero-logo-dark.svg" alt="Erik Arens Netzhero"/></a>
           <div class="d-flex align-items-center order-lg-3 ml-lg-auto"><a class="btn btn-primary ml-grid-gutter d-lg-inline-block navbar-btn" href="#modal-signin" data-toggle="modal" data-view="#modal-signup-view">Beraten lassen</a><a class="btn btn-primary ml-grid-gutter d-none d-lg-inline-block navbar-stuck-btn" href="#modal-signin" data-toggle="modal" data-view="#modal-signup-view">Beraten lassen</a></div>
           <div class="cs-offcanvas-collapse order-lg-2" id="primaryMenu">
             <div class="cs-offcanvas-cap navbar-box-shadow">
@@ -210,7 +207,7 @@
         <!-- Text-->
         <div class="container bg-overlay-content text-center pt-6 pt-lg-7">
           <h2 class="font-size-xl font-weight-normal text-light">Wir setzen dein Projekt um.</h2>
-          <h1 class="text-light">Intelligente Webseiten. Echte Ergebnisse.</h1>
+          <h1 class="text-light">Intelligente Webseiten & Webbasierte Software.</h1>
         </div>
         <div class="d-block d-sm-none" style="height: 100px;"></div>
         <div class="d-none d-sm-block d-lg-none" style="height: 300px;"></div>
@@ -244,48 +241,49 @@
       </section>
       <!-- Services-->
       <section class="container pt-5 pt-lg-6" id="dienstleistungen">
-        <h2 class="text-center">So können wir dir helfen, mehr Kunden zu gewinnen.</h2>
+        <h2 class="text-center">Alle Vorteile des Web's für dein Unternehmen!</h2>
         <p class="text-center text-muted mb-0">Unsere Leistungen im Überblick.</p>
-        <!-- Webdesign Service-->
-        <div class="row align-items-center border-bottom py-5">
-          <div class="col-md-6 py-3"><img class="d-block mx-auto" src="img/demo/web-studio/services/01.svg" alt="Responsive Web Design"/>
-          </div>
-          <div class="col-xl-4 col-lg-5 col-md-6 offset-lg-1 py-3">
-            <h3 class="h4 mb-4">Responsive Web Design</h3>
-            <ul class="list-unstyled">
-              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Sammeln von Benutzerdaten, Erstellen eines Benutzerflussdiagramms, Erstellen von Wireframes</span></li>
-              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Website UI / UX Design für Desktop und Mobile Endgeräte</span></li>
-              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Konvertieren von Designmodellen in responsive HTML-basierte Websites oder WordPress (CMS)</span></li>
-            </ul>
-            <h4 class="h6 pt-2 mb-1">Tools and Technologien:</h4>
-            <p class="pb-1">Adobe Xd, Illustrator, Photoshop, HTML, CSS, JavaScript & WordPress</p><a class="font-weight-medium" href="#modal-signin" data-toggle="modal" data-view="#modal-signup-view">Beraten lassen<i class="fe-chevron-right font-size-xl ml-1"></i></a>
-          </div>
-        </div>
         <!-- Web Dev Service-->
         <div class="row align-items-center border-bottom py-5">
-          <div class="col-md-6 offset-lg-1 py-3 order-md-2"><img class="d-block mx-auto" src="img/demo/web-studio/services/02.svg" alt="Web Development"/>
+          <div class="col-md-6 py-3"><img class="d-block mx-auto" src="img/demo/web-studio/services/02.svg" alt="Responsive Web Design"/>
           </div>
-          <div class="col-xl-4 col-lg-5 col-md-6 offset-xl-1 py-3 order-md-1">
-            <h3 class="h4 mb-4">Web Entwicklung (Software)</h3>
+          <div class="col-xl-4 col-lg-5 col-md-6 offset-lg-1 py-3">
+            <h3 class="h4 mb-4">Web Entwicklung<br> (Webbasierte Software)</h3>
             <ul class="list-unstyled">
-              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Erstellung dynamischer Websites und Webanwendungen mit den neuesten Technologien</span></li>
-              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Front-end und Back-end Entwicklung</span></li>
-              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Integration mit dem beliebten CMS WordPress</span></li>
+              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Erstellung dynamischer Webanwendungen mit den neuesten Technologien.</span></li>
+              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>100% optimierte Funktionsweise, abgestimmt auf deine Bedürfnisse.</span></li>
+              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Moderne User-Interfaces mit optimiertem Nutzungsflow.</span></li>
+              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Front-end und Back-end Entwicklung.</span></li>
             </ul>
             <h4 class="h6 pt-2 mb-1">Tools and Technologien:</h4>
-            <p class="pb-1">React.js & Node.js</p><a class="font-weight-medium" href="#modal-signin" data-toggle="modal" data-view="#modal-signup-view">Beraten lassen<i class="fe-chevron-right font-size-xl ml-1"></i></a>
+            <p class="pb-1">Angular & ASP.NET Core</p><a class="font-weight-medium" href="#modal-signin" data-toggle="modal" data-view="#modal-signup-view">Beraten lassen<i class="fe-chevron-right font-size-xl ml-1"></i></a>
           </div>
         </div>
-        <!-- Mobile Dev Service-->
+        <!--Webdesign Service-->
+        <div class="row align-items-center border-bottom py-5">
+          <div class="col-md-6 offset-lg-1 py-3 order-md-2"><img class="d-block mx-auto" src="img/demo/web-studio/services/01.svg" alt="Web Development"/>
+          </div>
+          <div class="col-xl-4 col-lg-5 col-md-6 offset-xl-1 py-3 order-md-1">
+            <h3 class="h4 mb-4">Responsive Web Design</h3>
+            <ul class="list-unstyled">
+              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Sammeln von Benutzerdaten, Erstellen eines Benutzerflussdiagramms, Erstellen von Wireframes.</span></li>
+              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Website UI / UX Design für Desktop und Mobile Endgeräte.</span></li>
+              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Konvertieren von Designmodellen in responsive HTML-basierte Websites oder WordPress (CMS).</span></li>
+            </ul>
+            <h4 class="h6 pt-2 mb-1">Tools and Technologien:</h4>
+            <p class="pb-1">HTML, CSS, JavaScript, Bootstrap & WordPress</p><a class="font-weight-medium" href="#modal-signin" data-toggle="modal" data-view="#modal-signup-view">Beraten lassen<i class="fe-chevron-right font-size-xl ml-1"></i></a>
+          </div>
+        </div>
+        <!-- SEO Service-->
         <div class="row align-items-center border-bottom py-5">
           <div class="col-md-6 py-3"><img class="d-block mx-auto" src="img/img-main/dienstleistungen/seo_dienstleistung.svg" alt="Mobile Apps Development"/>
           </div>
           <div class="col-xl-4 col-lg-5 col-md-6 offset-lg-1 py-3">
             <h3 class="h4 mb-4">Suchmaschinenoptimierung (SEO)</h3>
             <ul class="list-unstyled">
-              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Analyse deines Webauftrittes und Zieldefinition</span></li>
-              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Technische Optimierung</span></li>
-              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Ranking Überwachung und laufende Optimierung</span></li>
+              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Analyse deines Webauftrittes und Zieldefinition.</span></li>
+              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Technische Optimierung.</span></li>
+              <li class="d-flex mb-2 pb-1"><i class="fe-check-circle text-success font-size-xl mt-1 mr-3"></i><span>Ranking Überwachung und laufende Optimierung.</span></li>
             </ul>
             <a class="font-weight-medium" href="#modal-signin" data-toggle="modal" data-view="#modal-signup-view">Beraten lassen<i class="fe-chevron-right font-size-xl ml-1"></i></a>
           </div>
@@ -294,23 +292,22 @@
       <!-- Portfolio-->
       <section class="container overflow-hidden pt-5 pt-md-6 pt-lg-7 pb-4 pb-md-2">
         <h2 class="text-center pt-4 pt-md-0">Portfolio</h2>
-        <p class="text-center text-muted pb-4">Unsere abgeschlossenen Projekte im Überblick.</p>
+        <p class="text-center text-muted pb-4">Eine Auswahl abgeschlossener Projekte.</p>
         <div class="cs-masonry-filterable mb-3">
           <!-- Portfolio nav (Filters)-->
           <ul class="cs-masonry-filters nav nav-tabs justify-content-center pb-4">
             <li class="nav-item"><a class="nav-link active" href="#" data-group="all">All</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" data-group="web">Web</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" data-group="mobile">Mobile</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" data-group="identity">Identity</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-group="web">Websites</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-group="web-app">Web-Applications</a></li>
           </ul>
           <!-- Portfolio grid-->
           <div class="cs-masonry-grid" data-columns="3">
-            <div class="cs-grid-item" data-groups="[&quot;web&quot;,&quot;identity&quot;]"><a class="card card-hover border-0 box-shadow" href="projekt-diekennstedoch.html"><img class="card-img-top" src="img/img-main/slider/projekt-diekennstedoch/Thumbnail.png" alt="Portfolio thumb"/>
+            <div class="cs-grid-item" data-groups="[&quot;web&quot;]"><a class="card card-hover border-0 box-shadow" href="projekt-diekennstedoch.html"><img class="card-img-top" src="img/img-main/slider/projekt-diekennstedoch/Thumbnail.png" alt="Portfolio thumb"/>
                 <div class="card-body text-center">
                   <h3 class="h5 nav-heading mb-2">diekennstedoch</h3>
                   <p class="font-size-sm text-muted mb-2">Website Entwicklung & Corporate Identity</p>
                 </div></a></div>
-            <div class="cs-grid-item" data-groups="[&quot;web&quot;,&quot;identity&quot;]"><a class="card card-hover border-0 box-shadow" href="projekt-holzjupp.html"><img class="card-img-top" src="img/img-main/slider/projekt-holzjupp/Thumbnail.png" alt="Portfolio thumb"/>
+            <div class="cs-grid-item" data-groups="[&quot;web&quot;]"><a class="card card-hover border-0 box-shadow" href="projekt-holzjupp.html"><img class="card-img-top" src="img/img-main/slider/projekt-holzjupp/Thumbnail.png" alt="Portfolio thumb"/>
                 <div class="card-body text-center">
                   <h3 class="h5 nav-heading mb-2">Holzjupp</h3>
                   <p class="font-size-sm text-muted mb-2">Website Entwicklung & Corporate Identity</p>
@@ -373,20 +370,17 @@
         <div class="row pb-2">
 
           <form action="php/form-mailer.php" method="POST" role="form" id="contactForm" class="col-xl-6 col-lg-7 col-md-7 needs-validation mb-5" >
-            <h2 class="text-light pb-4">Welche Art von Projekt möchtest du umsetzen?</h2>
-            <h3 class="h6 pb-2 text-light">Dienstleistung</h3>
+            <h2 class="text-light pb-4">Wir möchten dir bei deinem Projekt helfen! Kontaktiere uns einfach.</h2>
+            <h3 class="h6 pb-2 text-light">Projekttyp</h3>
             <div class="btn-group-toggle pb-3 mb-3" data-toggle="buttons">
               <label class="btn btn-outline-light mr-2 mb-2 active">
-                <input type="radio" name="services1" id="branding" checked>Branding
+                <input type="radio" name="services1" id="website" checked>Webdesign / Website
               </label>
               <label class="btn btn-outline-light mr-2 mb-2">
-                <input type="radio" name="services2" id="ux">UI/UX
+                <input type="radio" name="services2" id="web-app">Webbasierte Softwarelösungen
               </label>
               <label class="btn btn-outline-light mr-2 mb-2">
-                <input type="radio" name="services3" id="web">Web
-              </label>
-              <label class="btn btn-outline-light mb-2">
-                <input type="radio" name="services4" id="mobile">Mobile
+                <input type="radio" name="services3" id="seo">SEO
               </label>
             </div>
             <div class="input-group-overlay form-group">

@@ -1,293 +1,351 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8">
-    <title>Netzhero | Über uns</title>
-    <!-- SEO Meta Tags-->
-    <meta name="description" content="Netzhero Über uns">
-    <meta name="keywords" content="Netzhero, Über uns, About">
-    <meta name="author" content="Erik Arens">
-    <!-- Viewport-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon and Touch Icons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
-    <meta name="msapplication-TileColor" content="#766df4">
-    <meta name="theme-color" content="#ffffff">
-    <!-- Page loading styles-->
-    <style>
-      .cs-page-loading {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-transition: all .4s .2s ease-in-out;
-        transition: all .4s .2s ease-in-out;
-        background-color: #fff;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 9999;
-      }
-      .cs-page-loading.active {
-        opacity: 1;
-        visibility: visible;
-      }
-      .cs-page-loading-inner {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
-        opacity: 0;
-      }
-      .cs-page-loading.active > .cs-page-loading-inner {
-        opacity: 1;
-      }
-      .cs-page-loading-inner > span {
-        display: block;
-        font-family: 'Inter', sans-serif;
-        font-size: 1rem;
-        font-weight: normal;
-        color: #737491;
-      }
-      .cs-page-spinner {
-        display: inline-block;
-        width: 2.75rem;
-        height: 2.75rem;
-        margin-bottom: .75rem;
-        vertical-align: text-bottom;
-        border: .15em solid #766df4;
-        border-right-color: transparent;
-        border-radius: 50%;
-        -webkit-animation: spinner .75s linear infinite;
-        animation: spinner .75s linear infinite;
-      }
-      @-webkit-keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-      @keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-      
-    </style>
-    <!-- Page loading scripts-->
-    <script>
-      (function () {
-        window.onload = function () {
-          var preloader = document.querySelector('.cs-page-loading');
-          preloader.classList.remove('active');
-          setTimeout(function () {
-            preloader.remove();
-          }, 2000);
-        };
-      })();
-      
-    </script>
-    <!-- Vendor Styles-->
-    <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css"/>
-    <link rel="stylesheet" media="screen" href="vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
-    <!-- Main Theme Styles + Bootstrap-->
-    <link rel="stylesheet" media="screen" href="css/theme.min.css">
-    <!-- Cookie Banner-->
-    <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.2/src/glowCookies.min.js"></script>
-    <script>
-        glowCookies.start('de', { 
+   <head>
+      <meta charset="utf-8" />
+      <title>Netzhero | Über uns</title>
+      <!-- SEO Meta Tags-->
+      <meta name="description" content="Netzhero Über uns" />
+      <meta name="keywords" content="Netzhero, Über uns, About" />
+      <meta name="author" content="Erik Arens" />
+      <!-- Viewport-->
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <!-- Favicon and Touch Icons-->
+      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+      <link rel="manifest" href="site.webmanifest" />
+      <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg" />
+      <meta name="msapplication-TileColor" content="#766df4" />
+      <meta name="theme-color" content="#ffffff" />
+      <!-- Page loading styles-->
+      <style>
+         .cs-page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all 0.4s 0.2s ease-in-out;
+            transition: all 0.4s 0.2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+         }
+         .cs-page-loading.active {
+            opacity: 1;
+            visibility: visible;
+         }
+         .cs-page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity 0.2s ease-in-out;
+            transition: opacity 0.2s ease-in-out;
+            opacity: 0;
+         }
+         .cs-page-loading.active > .cs-page-loading-inner {
+            opacity: 1;
+         }
+         .cs-page-loading-inner > span {
+            display: block;
+            font-family: "Inter", sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #737491;
+         }
+         .cs-page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: 0.75rem;
+            vertical-align: text-bottom;
+            border: 0.15em solid #766df4;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner 0.75s linear infinite;
+            animation: spinner 0.75s linear infinite;
+         }
+         @-webkit-keyframes spinner {
+            100% {
+               -webkit-transform: rotate(360deg);
+               transform: rotate(360deg);
+            }
+         }
+         @keyframes spinner {
+            100% {
+               -webkit-transform: rotate(360deg);
+               transform: rotate(360deg);
+            }
+         }
+      </style>
+      <!-- Page loading scripts-->
+      <script>
+         (function () {
+            window.onload = function () {
+               var preloader = document.querySelector(".cs-page-loading");
+               preloader.classList.remove("active");
+               setTimeout(function () {
+                  preloader.remove();
+               }, 2000);
+            };
+         })();
+      </script>
+      <!-- Vendor Styles-->
+      <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css" />
+      <link rel="stylesheet" media="screen" href="vendor/lightgallery.js/dist/css/lightgallery.min.css" />
+      <!-- Main Theme Styles + Bootstrap-->
+      <link rel="stylesheet" media="screen" href="css/theme.min.css" />
+      <!-- Cookie Banner-->
+      <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.2/src/glowCookies.min.js"></script>
+      <script>
+         glowCookies.start("de", {
             style: 1,
-            analytics: 'UA-150725133-1',
-            policyLink: 'https://netzhero.de/datenschutz',
-            acceptBtnBackground: '#5549F1',
-            hideAfterClick: true
-        });
-    </script>
-  </head>
-  <!-- Body-->
-  <body>
-    <!-- Page loading spinner-->
-    <div class="cs-page-loading active">
-      <div class="cs-page-loading-inner">
-        <div class="cs-page-spinner"></div><span>Loading...</span>
+            analytics: "UA-150725133-1",
+            policyLink: "https://netzhero.de/datenschutz",
+            acceptBtnBackground: "#5549F1",
+            hideAfterClick: true,
+         });
+      </script>
+   </head>
+   <!-- Body-->
+   <body>
+      <!-- Page loading spinner-->
+      <div class="cs-page-loading active">
+         <div class="cs-page-loading-inner">
+            <div class="cs-page-spinner"></div>
+            <span>Loading...</span>
+         </div>
       </div>
-    </div>
-    <main class="cs-page-wrapper">
-      <!-- Beratung Modal-->
-      <div class="modal fade" id="modal-signin" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content border-0">
-            <div class="cs-view" id="modal-signup-view">
-              <div class="modal-header border-0 bg-dark px-4">
-                <h4 class="modal-title text-light">Beratung anfordern</h4>
-                <button class="close text-light" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              </div>
-              <div class="modal-body px-4">
-                <p class="font-size-ms text-muted">Wir werden uns in kürze bei dir melden.</p>
-                
-                <form action="php/form-mailer-header.php" method="POST" class="needs-validation" role="form" id="contactForm">
-                  <div class="btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-outline-dark mr-2 mb-2 active">
-                      <input type="radio" name="services1-0" id="branding" checked>Branding
-                    </label>
-                    <label class="btn btn-outline-dark mr-2 mb-2">
-                      <input type="radio" name="services2-0" id="ux">UI/UX
-                    </label>
-                    <label class="btn btn-outline-dark mr-2 mb-2">
-                      <input type="radio" name="services3-0" id="web">Web
-                    </label>
-                    <label class="btn btn-outline-dark mb-2">
-                      <input type="radio" name="services4-0" id="mobile">Mobile
-                    </label>
-                  </div>
-                  <div class="input-group-overlay form-group">
-                    <div class="input-group-prepend-overlay"><span class="input-group-text"><i class="fe-user"></i></span></div>
-                    <input class="form-control prepended-form-control" id="name" type="text" name="name1" placeholder="Name" required>
-                  </div>
-                  <div class="input-group-overlay form-group">
-                    <div class="input-group-prepend-overlay"><span class="input-group-text"><i class="fe-mail"></i></span></div>
-                    <input class="form-control prepended-form-control" id="email" type="email" name="mail1" placeholder="Email" required>
-                  </div>
-                  <div class="form-group">
-                    <textarea class="form-control" rows="4" id="message" name="text1" placeholder="Projekt Beschreibung" required></textarea>
-                  </div>
-                  <button class="btn btn-primary btn-block" type="submit">Anfrage senden</button>
-                </form>
+      <main class="cs-page-wrapper">
+         <!-- Beratung Modal-->
+         <div class="modal fade" id="modal-signin" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+               <div class="modal-content border-0">
+                  <div class="cs-view" id="modal-signup-view">
+                     <div class="modal-header border-0 bg-dark px-4">
+                        <h4 class="modal-title text-light">Beratung anfordern</h4>
+                        <button class="close text-light" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                     </div>
+                     <div class="modal-body px-4">
+                        <p class="font-size-ms text-muted">Wir werden uns in kürze bei dir melden.</p>
 
-              </div>
+                        <form action="php/form-mailer-header.php" method="POST" class="needs-validation" role="form" id="contactForm">
+                           <div class="btn-group-toggle" data-toggle="buttons">
+                              <label class="btn btn-outline-dark mr-2 mb-2 active"> <input type="radio" name="services1-0" id="website" checked />Webdesign / Website </label>
+                              <label class="btn btn-outline-dark mr-2 mb-2"> <input type="radio" name="services2-0" id="web-app" />Webbasierte Softwarelösungen </label>
+                              <label class="btn btn-outline-dark mr-2 mb-2"> <input type="radio" name="services3-0" id="seo" />Suchmaschinenoptimierung </label>
+                           </div>
+                           <div class="input-group-overlay form-group">
+                              <div class="input-group-prepend-overlay">
+                                 <span class="input-group-text"><i class="fe-user"></i></span>
+                              </div>
+                              <input class="form-control prepended-form-control" id="name" type="text" name="name1" placeholder="Name" required />
+                           </div>
+                           <div class="input-group-overlay form-group">
+                              <div class="input-group-prepend-overlay">
+                                 <span class="input-group-text"><i class="fe-mail"></i></span>
+                              </div>
+                              <input class="form-control prepended-form-control" id="email" type="email" name="mail1" placeholder="Email" required />
+                           </div>
+                           <div class="form-group">
+                              <textarea class="form-control" rows="4" id="message" name="text1" placeholder="Projekt Beschreibung" required></textarea>
+                           </div>
+                           <button class="btn btn-primary btn-block" type="submit">Anfrage senden</button>
+                        </form>
+                     </div>
+                  </div>
+                  <div class="modal-body text-center px-4 pt-2 pb-4">
+                     <hr />
+                     <p class="font-size-sm font-weight-medium text-heading pt-4">Hier sind wir auch zu finden.</p>
+                     <a class="social-btn sb-facebook sb-lg mx-1 mb-2" href="https://www.facebook.com/netzhero.de"><i class="fe-facebook"></i></a
+                     ><a class="social-btn sb-instagram sb-lg mx-1 mb-2" href="https://www.instagram.com/netzhero/"><i class="fe-instagram"></i></a
+                     ><a class="social-btn sb-linkedin sb-lg mx-1 mb-2" href="http://linkedin.com/company/netzhero"><i class="fe-linkedin"></i></a>
+                  </div>
+               </div>
             </div>
-            <div class="modal-body text-center px-4 pt-2 pb-4">
-              <hr>
-              <p class="font-size-sm font-weight-medium text-heading pt-4">Hier sind wir auch zu finden.</p><a class="social-btn sb-facebook sb-lg mx-1 mb-2" href="https://www.facebook.com/netzhero.de"><i class="fe-facebook"></i></a><a class="social-btn sb-instagram sb-lg mx-1 mb-2" href="https://www.instagram.com/netzhero/"><i class="fe-instagram"></i></a><a class="social-btn sb-linkedin sb-lg mx-1 mb-2" href="http://linkedin.com/company/netzhero"><i class="fe-linkedin"></i></a>
+         </div>
+         <!-- Navbar (Floating light)-->
+         <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+         <header class="cs-header navbar navbar-expand-lg navbar-light navbar-floating navbar-sticky" data-scroll-header>
+            <div class="container px-0 px-xl-3">
+               <button class="navbar-toggler ml-n2 mr-2" type="button" data-toggle="offcanvas" data-offcanvas-id="primaryMenu"><span class="navbar-toggler-icon"></span></button
+               ><a class="navbar-brand order-lg-1 mx-auto ml-lg-0 pr-lg-2 mr-lg-4" href="/"
+                  ><img class="navbar-floating-logo d-none d-lg-block" width="153" src="img/img-main/logo/netzhero-logo-dark.svg" alt="Erik Arens Netzhero" /><img
+                     class="navbar-stuck-logo"
+                     width="153"
+                     src="img/img-main/logo/netzhero-logo-dark.svg"
+                     alt="Erik Arens Netzhero" /><img class="d-lg-none" width="90" src="img/img-main/logo/netzhero-logo-dark.svg" alt="Erik Arens Netzhero"
+               /></a>
+               <div class="d-flex align-items-center order-lg-3 ml-lg-auto">
+                  <a class="btn btn-primary ml-grid-gutter d-lg-inline-block navbar-btn" href="#modal-signin" data-toggle="modal" data-view="#modal-signup-view">Beraten lassen</a
+                  ><a class="btn btn-primary ml-grid-gutter d-none d-lg-inline-block navbar-stuck-btn" href="#modal-signin" data-toggle="modal" data-view="#modal-signup-view">Beraten lassen</a>
+               </div>
+               <div class="cs-offcanvas-collapse order-lg-2" id="primaryMenu">
+                  <div class="cs-offcanvas-cap navbar-box-shadow">
+                     <h5 class="mt-1 mb-0">Menu</h5>
+                     <button class="close lead" type="button" data-toggle="offcanvas" data-offcanvas-id="primaryMenu"><span aria-hidden="true">&times;</span></button>
+                  </div>
+                  <div class="cs-offcanvas-body">
+                     <!-- Menu-->
+                     <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="dienstleistung.html">Dienstleistung</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="ueber-uns.html">Über</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+                     </ul>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- Navbar (Floating light)-->
-      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
-      <header class="cs-header navbar navbar-expand-lg navbar-light navbar-floating navbar-sticky" data-scroll-header>
-        <div class="container px-0 px-xl-3">
-          <button class="navbar-toggler ml-n2 mr-2" type="button" data-toggle="offcanvas" data-offcanvas-id="primaryMenu"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand order-lg-1 mx-auto ml-lg-0 pr-lg-2 mr-lg-4" href="/"><img class="navbar-floating-logo d-none d-lg-block" width="153" src="img/img-main/logo/netzhero-logo-dark.svg" alt="Erik Arens Netzhero"/><img class="navbar-stuck-logo" width="153" src="img/img-main/logo/netzhero-logo-dark.svg" alt="Erik Arens Netzhero"/><img class="d-lg-none" width="58" src="img/img-main/logo/netzhero-logo-dark.svg" alt="Erik Arens Netzhero"/></a>
-          <div class="d-flex align-items-center order-lg-3 ml-lg-auto"><a class="btn btn-primary ml-grid-gutter d-lg-inline-block navbar-btn" href="#modal-signin" data-toggle="modal" data-view="#modal-signup-view">Beraten lassen</a><a class="btn btn-primary ml-grid-gutter d-none d-lg-inline-block navbar-stuck-btn" href="#modal-signin" data-toggle="modal" data-view="#modal-signup-view">Beraten lassen</a></div>
-          <div class="cs-offcanvas-collapse order-lg-2" id="primaryMenu">
-            <div class="cs-offcanvas-cap navbar-box-shadow">
-              <h5 class="mt-1 mb-0">Menu</h5>
-              <button class="close lead" type="button" data-toggle="offcanvas" data-offcanvas-id="primaryMenu"><span aria-hidden="true">&times;</span></button>
+         </header>
+         <!-- Page content-->
+         <!-- Intro-->
+         <section class="container my-lg-2 pt-5 pb-lg-7">
+            <div class="row align-items-center">
+               <div class="col-lg-5 py-3 py-lg-0">
+                  <h1>Unsere Ziele. Unsere Leidenschaft.</h1>
+                  <div class="py-4">
+                     <p class="cs-callout">
+                        Gemeinsamer Erfolg, das ist unser Ziel! Dazu bieten wir verschiedene Lösung an und sorgen dafür, dass dein Projekt in guten Händen ist.<br /><br />
+                        Jedes Projekt wird von uns individuell betrachtet und gemeinsam erarbeiten wir Konzepte für mehr Erfolg. Das ist unsere Leidenschaft!
+                     </p>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-7 offset-xl-1">
+                  <div class="py-5" style="min-height: 543px">
+                     <div class="d-none d-lg-block position-absolute bg-no-repeat bg-position-center h-100" style="top: 0; left: -45px; width: 646px; background-image: url(img/pages/about/bg-shape.svg)"></div>
+                     <div class="row no-gutters mx-n2 pt-lg-4">
+                        <div class="col-sm-4 px-2 mb-3">
+                           <a class="card h-100 card-body py-5 justify-content-center border-0 box-shadow-lg text-center" href="#"
+                              ><i class="fe-file text-primary h1 mb-3"></i>
+                              <h3 class="h5 mb-0">Konzepte</h3></a
+                           >
+                        </div>
+                        <div class="col-sm-4 px-2 mb-3">
+                           <a class="card card-body py-5 border-0 box-shadow-lg text-center mb-3" href="#"
+                              ><i class="fe-pie-chart text-danger h1 mb-3"></i>
+                              <h3 class="h5 mb-0">Analysieren</h3></a
+                           ><a class="card card-body py-5 border-0 box-shadow-lg text-center" href="#"
+                              ><i class="fe-refresh-ccw text-info h1 mb-3"></i>
+                              <h3 class="h6 mb-0">Automatisieren</h3></a
+                           >
+                        </div>
+                        <div class="col-sm-4 px-2 mb-3">
+                           <a class="card card-body py-5 border-0 box-shadow-lg text-center mb-3" href="#"
+                              ><i class="fe-folder-plus text-success h1 mb-3"></i>
+                              <h3 class="h5 mb-0">Erstellen</h3></a
+                           ><a class="card card-body py-5 border-0 box-shadow-lg text-center" href="#"
+                              ><i class="fe-terminal text-warning h1 mb-3"></i>
+                              <h3 class="h5 mb-0">Entwickeln</h3></a
+                           >
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="cs-offcanvas-body">
-              <!-- Menu-->
-              <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="dienstleistung.html">Dienstleistung</a></li>
-                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                <li class="nav-item active"><a class="nav-link" href="ueber-uns.html">Über</a></li>
-                <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
-              </ul>
+         </section>
+         <!-- Team-->
+         <h2 class="pb-4 mb-4 text-center">Wer steckt hinter Netzhero?</h2>
+         <section class="container mb-5 pb-3 pb-lg-0 mb-lg-7">
+            <div class="card card-body py-5 text-center text-md-left">
+               <div class="d-md-flex justify-content-center align-items-center">
+                  <div class="mb-4 mb-md-0">
+                     <p class="text-muted mb-0">
+                        Hey, mein Name ist Erik.<br />
+                        Schon immer hat mich das Programmieren begeistert. Das führte dazu, dass ich bereits mit 13 Jahren angefangen habe, die ersten digitalen Ideen umzusetzen. Mithilfe der Programmiersprache die
+                        Möglichkeit zu haben, komplexe Ideen eigenständig in die Realität umzusetzen, das fasziniert mich.<br /><br />
+                        Die Gründung von Netzhero hat es mir ermöglicht, die unterschiedlichsten Projekte erfolgreich umzusetzen. Vor allem die Zusammenarbeit mit der Vielfalt an Leuten aus unterschiedlichsten Branchen
+                        macht meine Arbeit immer wieder spannend und abwechslungsreich. So arbeite ich beispielsweise auch mit Partnern aus unterschiedlichen Bereichen zusammen, um meine Projekte mit ihrer Unterstützung
+                        zum Leben zu erwecken.
+                     </p>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
-      </header>
-      <!-- Page content-->
-      <!-- Intro-->
-      <section class="container my-lg-2 pt-5 pb-lg-7">
-        <div class="row align-items-center">
-          <div class="col-lg-5 py-3 py-lg-0">
-            <h1>Unsere Ziele. Unsere Leidenschaft.</h1>
-            <div class="py-4">
-              <p class="cs-callout">Gemeinsamer Erfolg, das ist unser Ziel! Dazu bieten wir verschiedene Lösung an und sorgen dafür, dass dein Projekt in guten Händen ist.<br><br>
-                Jedes Projekt wird von uns individuell betrachtet und gemeinsam erarbeiten wir Konzepte für mehr Erfolg. Das ist unsere Leidenschaft!</p>
+         </section>
+         <!-- Clients-->
+         <section class="container pb-5 pb-lg-6 mt-5 mt-md-6 mt-lg-7">
+            <h2 class="mb-5 text-center">Diese Kunden vertrauen uns.</h2>
+            <div class="row">
+               <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+                  <a class="card border-0 box-shadow card-hover py-3 py-sm-4" href="https://diekennstedoch.de/" target="_blank">
+                     <div class="card-body px-1 py-0 text-center">
+                        <div class="cs-swap-image">
+                           <img class="cs-swap-to" width="150" src="/img/img-main/kunden/diekennstedoch-Farbe.png" alt="Logo von diekennstedoch in Farbe" /><img
+                              class="cs-swap-from"
+                              width="150"
+                              src="/img/img-main/kunden/diekennstedoch-schwarz.png"
+                              alt="Logo von diekennstedoch in schwarz/weiss"
+                           />
+                        </div></div
+                  ></a>
+               </div>
+               <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+                  <a class="card border-0 box-shadow card-hover py-3 py-sm-4" href="http://www.holzjupp.de/" target="_blank">
+                     <div class="card-body px-1 py-0 text-center">
+                        <div class="cs-swap-image">
+                           <img class="cs-swap-to" width="150" src="/img/img-main/kunden/Rezension Holzjupp.png" alt="Logo von Holzjupp in Schwarz" /><img
+                              class="cs-swap-from"
+                              width="150"
+                              src="/img/img-main/kunden/Rezension-Holzjupp-Blau.png"
+                              alt="Logo von Holzjupp in Blau"
+                           />
+                        </div></div
+                  ></a>
+               </div>
+               <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+                  <a class="card border-0 box-shadow card-hover py-3 py-sm-4" href="https://www.pluggramming.de/" target="_blank">
+                     <div class="card-body px-1 py-0 text-center">
+                        <div class="cs-swap-image">
+                           <img class="cs-swap-to" width="150" src="/img/img-main/kunden/Rezension-Pluggramming-Schwarz.png" alt="Logo von Pluggramming in Schwarz" /><img
+                              class="cs-swap-from"
+                              width="150"
+                              src="/img/img-main/kunden/Rezension-Pluggramming-Blau.png"
+                              alt="Logo von Pluggramming in Blau"
+                           />
+                        </div></div
+                  ></a>
+               </div>
+               <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+                  <a class="card border-0 box-shadow card-hover py-3 py-sm-4" href="https://drohnen-nrw.de/" target="_blank">
+                     <div class="card-body px-1 py-0 text-center">
+                        <div class="cs-swap-image">
+                           <img class="cs-swap-to" width="150" src="/img/img-main/kunden/Rezension-Drohnen-NRW-Schwarz.png" alt="Logo von Drohnen-NRW in Schwarz" /><img
+                              class="cs-swap-from"
+                              width="150"
+                              src="/img/img-main/kunden/Rezension-Drohnen-NRW.png"
+                              alt="Logo von Drohnen-NRW in Blau"
+                           />
+                        </div></div
+                  ></a>
+               </div>
             </div>
-          </div>
-          <div class="col-xl-6 col-lg-7 offset-xl-1">
-            <div class="py-5" style="min-height: 543px;">
-              <div class="d-none d-lg-block position-absolute bg-no-repeat bg-position-center h-100" style="top: 0; left: -45px; width: 646px; background-image: url(img/pages/about/bg-shape.svg);"></div>
-              <div class="row no-gutters mx-n2 pt-lg-4">
-                <div class="col-sm-4 px-2 mb-3"><a class="card h-100 card-body py-5 justify-content-center border-0 box-shadow-lg text-center" href="#"><i class="fe-file text-primary h1 mb-3"></i>
-                    <h3 class="h5 mb-0">Konzepte</h3></a></div>
-                <div class="col-sm-4 px-2 mb-3"><a class="card card-body py-5 border-0 box-shadow-lg text-center mb-3" href="#"><i class="fe-pie-chart text-danger h1 mb-3"></i>
-                    <h3 class="h5 mb-0">Analysieren</h3></a><a class="card card-body py-5 border-0 box-shadow-lg text-center" href="#"><i class="fe-refresh-ccw text-info h1 mb-3"></i>
-                    <h3 class="h6 mb-0">Automatisieren</h3></a></div>
-                <div class="col-sm-4 px-2 mb-3"><a class="card card-body py-5 border-0 box-shadow-lg text-center mb-3" href="#"><i class="fe-folder-plus text-success h1 mb-3"></i>
-                    <h3 class="h5 mb-0">Erstellen</h3></a><a class="card card-body py-5 border-0 box-shadow-lg text-center" href="#"><i class="fe-terminal text-warning h1 mb-3"></i>
-                    <h3 class="h5 mb-0">Entwickeln</h3></a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Team-->
-      <h2 class="pb-4 mb-4 text-center">Wer steckt hinter Netzhero?</h2>
-      <section class="container mb-5 pb-3 pb-lg-0 mb-lg-7">
-        <div class="card card-body py-5 text-center text-md-left">
-          <div class="d-md-flex justify-content-center align-items-center">
-            <div class="mb-4 mb-md-0">
-              <p class="text-muted mb-0">Hey, mein Name ist Erik.<br>
-                Schon immer hat mich das Programmieren begeistert. Das führte dazu, dass ich bereits mit 13 Jahren angefangen habe, die ersten digitalen Ideen umzusetzen. Mithilfe der Programmiersprache die Möglichkeit zu haben, komplexe Ideen eigenständig in die Realität umzusetzen, das fasziniert mich.<br><br>
-                Die Gründung von Netzhero hat es mir ermöglicht, die unterschiedlichsten Projekte erfolgreich umzusetzen. Vor allem die Zusammenarbeit mit der Vielfalt an Leuten aus unterschiedlichsten Branchen macht meine Arbeit immer wieder spannend und abwechslungsreich. So arbeite ich beispielsweise auch mit Partnern aus unterschiedlichen Bereichen zusammen, um meine Projekte mit ihrer Unterstützung zum Leben zu erwecken.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Clients-->
-      <section class="container pb-5 pb-lg-6 mt-5 mt-md-6 mt-lg-7">
-        <h2 class="mb-5 text-center">Diese Kunden vertrauen uns.</h2>
-        <div class="row">
-          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 box-shadow card-hover py-3 py-sm-4" href="https://diekennstedoch.de/" target="_blank">
-              <div class="card-body px-1 py-0 text-center">
-                <div class="cs-swap-image"><img class="cs-swap-to" width="150" src="/img/img-main/kunden/diekennstedoch-Farbe.png" alt="Logo von diekennstedoch in Farbe"/><img class="cs-swap-from" width="150" src="/img/img-main/kunden/diekennstedoch-schwarz.png" alt="Logo von diekennstedoch in schwarz/weiss"/>
-                </div>
-              </div></a></div>
-          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 box-shadow card-hover py-3 py-sm-4" href="http://www.holzjupp.de/" target="_blank">
-              <div class="card-body px-1 py-0 text-center">
-                <div class="cs-swap-image"><img class="cs-swap-to" width="150" src="/img/img-main/kunden/Rezension Holzjupp.png" alt="Logo von Holzjupp in Schwarz"/><img class="cs-swap-from" width="150" src="/img/img-main/kunden/Rezension-Holzjupp-Blau.png" alt="Logo von Holzjupp in Blau"/>
-                </div>
-              </div></a></div>
-          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 box-shadow card-hover py-3 py-sm-4" href="https://www.pluggramming.de/" target="_blank">
-              <div class="card-body px-1 py-0 text-center">
-                <div class="cs-swap-image"><img class="cs-swap-to" width="150" src="/img/img-main/kunden/Rezension-Pluggramming-Schwarz.png" alt="Logo von Pluggramming in Schwarz"/><img class="cs-swap-from" width="150" src="/img/img-main/kunden/Rezension-Pluggramming-Blau.png" alt="Logo von Pluggramming in Blau"/>
-                </div>
-              </div></a></div>
-          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 box-shadow card-hover py-3 py-sm-4" href="https://drohnen-nrw.de/" target="_blank">
-              <div class="card-body px-1 py-0 text-center">
-                <div class="cs-swap-image"><img class="cs-swap-to" width="150" src="/img/img-main/kunden/Rezension-Drohnen-NRW-Schwarz.png" alt="Logo von Drohnen-NRW in Schwarz"/><img class="cs-swap-from" width="150" src="/img/img-main/kunden/Rezension-Drohnen-NRW.png" alt="Logo von Drohnen-NRW in Blau"/>
-                </div>
-              </div></a></div>
-        </div>
-      </section>
-    </main>
-    <!-- Footer-->
+         </section>
+      </main>
+      <!-- Footer-->
     <footer class="cs-footer jarallax bg-dark pt-5 pt-md-6 pt-lg-7" data-jarallax data-speed="0.3">
       <div class="jarallax-img" style="background-image: url(img/demo/web-studio/cubes-bg.jpg);"></div>
       <div class="container pt-3 pt-md-0">
         <div class="row pb-2">
 
           <form action="php/form-mailer.php" method="POST" role="form" id="contactForm" class="col-xl-6 col-lg-7 col-md-7 needs-validation mb-5" >
-            <h2 class="text-light pb-4">Welche Art von Projekt möchtest du umsetzen?</h2>
-            <h3 class="h6 pb-2 text-light">Dienstleistung</h3>
+            <h2 class="text-light pb-4">Wir möchten dir bei deinem Projekt helfen! Kontaktiere uns einfach.</h2>
+            <h3 class="h6 pb-2 text-light">Projekttyp</h3>
             <div class="btn-group-toggle pb-3 mb-3" data-toggle="buttons">
               <label class="btn btn-outline-light mr-2 mb-2 active">
-                <input type="radio" name="services1" id="branding" checked>Branding
+                <input type="radio" name="services1" id="website" checked>Webdesign / Website
               </label>
               <label class="btn btn-outline-light mr-2 mb-2">
-                <input type="radio" name="services2" id="ux">UI/UX
+                <input type="radio" name="services2" id="web-app">Webbasierte Softwarelösungen
               </label>
               <label class="btn btn-outline-light mr-2 mb-2">
-                <input type="radio" name="services3" id="web">Web
-              </label>
-              <label class="btn btn-outline-light mb-2">
-                <input type="radio" name="services4" id="mobile">Mobile
+                <input type="radio" name="services3" id="seo">SEO
               </label>
             </div>
             <div class="input-group-overlay form-group">
@@ -326,16 +384,16 @@
         <p class="font-size-sm text-center pb-2 mb-4"><span class="text-light opacity-50 mr-1">© All rights reserved.</span><a class="nav-link-style nav-link-light" href="https://netzhero.de/" target="_blank" rel="noopener">Erik Arens Netzhero</a></p>
       </div>
     </footer>
-    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll><span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span><i class="btn-scroll-top-icon fe-arrow-up">   </i></a>
-    <!-- Vendor scrits: js libraries and plugins-->
-    <script src="vendor/jquery/dist/jquery.slim.min.js"></script>
-    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
-    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
-    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
-    <script src="vendor/lg-video.js/dist/lg-video.min.js"></script>
-    <!-- Main theme script-->
-    <script src="js/theme.min.js"></script>
-  </body>
+      <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll><span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span><i class="btn-scroll-top-icon fe-arrow-up"> </i></a>
+      <!-- Vendor scrits: js libraries and plugins-->
+      <script src="vendor/jquery/dist/jquery.slim.min.js"></script>
+      <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="vendor/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+      <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+      <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+      <script src="vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+      <script src="vendor/lg-video.js/dist/lg-video.min.js"></script>
+      <!-- Main theme script-->
+      <script src="js/theme.min.js"></script>
+   </body>
 </html>

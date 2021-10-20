@@ -28,10 +28,9 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject  = 'Branding='.$_POST['services1'];
-    $mail->Subject .= ' UI/UX='.$_POST['services2'];
-    $mail->Subject .= ' Web='.$_POST['services3'];
-    $mail->Subject .= ' Mobile='.$_POST['services4'];
+    $mail->Subject  = 'Webdesign / Website ='.$_POST['service1'];
+    $mail->Subject .= 'Webbasierte Softwarelösungen ='.$_POST['service2'];
+    $mail->Subject .= 'SEO ='.$_POST['service3'];
 
     $mail->Body    = 'Name= ';
     $mail->Body   .= $_POST['name'];
